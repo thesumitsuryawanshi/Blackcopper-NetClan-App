@@ -6,13 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.netclanapp.R
-import com.example.netclanapp.adapters.rv_PersonListAdapter
-import com.example.netclanapp.databinding.FragmentExploreBinding
 import com.example.netclanapp.databinding.FragmentPersonalBinding
 
-
-class PersonalFragment : Fragment() {
+class PersonalFrag : Fragment() {
 
 
     lateinit var binding: FragmentPersonalBinding
@@ -37,20 +33,20 @@ class PersonalFragment : Fragment() {
 
         val personList =
             listOf(
-                "Electronics",
-                "Fasion",
-                "Furniture",
-                "Gifts",
-                "Grosery",
-                "Mobiles",
-                "Grosery -2 ",
-                "Grosery -3  "
+                " Snehal Mane",
+                " Gayatri Kolapkar",
+                " Gayatri Yendhe",
+                " Torna Patil",
+                " Shweta Swami",
+                " Snehal Waghmare",
+                " Dipali Gole ",
+                " Vikrant Mandake "
             )
 
         val adapter = rv_PersonListAdapter(personList)
 
-        binding.rvMusicList.layoutManager = GridLayoutManager(requireContext(), 1)
-        binding.rvMusicList.adapter = adapter
+        binding.rvPersonsList.layoutManager = GridLayoutManager(requireContext(), 1)
+        binding.rvPersonsList.adapter = adapter
         adapter.notifyItemInserted(personList.size - 1)
     }
 

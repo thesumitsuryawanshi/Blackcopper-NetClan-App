@@ -10,5 +10,8 @@
 
     //my color
     <color name="cardview_bg">#59FFFFFF</color>
+    <color name="gray">#A5A5A5</color>
+     <color name="red">#EA3E3E</color>
+
 
 </resources>

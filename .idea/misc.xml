@@ -7,15 +7,19 @@
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/drawable/serachitem_roundborder.xml" value="0.344" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_Group.xml" value="0.5494791666666666" />
+        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_business.xml" value="0.4703703703703704" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_chat.xml" value="0.2578125" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_contacts.xml" value="0.2578125" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.34814814814814815" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_explore.xml" value="0.5" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_group.xml" value="0.1" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_home.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_merchant.xml" value="0.33" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_network.xml" value="0.2578125" />
-        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_personal.xml" value="0.5494791666666666" />
-        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/rv_explore_items.xml" value="0.67" />
+        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/fragment_personal.xml" value="0.33" />
+        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/rv_explore_business_items.xml" value="0.5" />
+        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/rv_explore_items.xml" value="0.5" />
+        <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/layout/rv_explore_merchant_items.xml" value="0.5" />
         <entry key="..\:/Users/Magician/AndroidStudioProjects/NetClanApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>

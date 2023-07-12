@@ -5,13 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.netclanapp.MainActivity
-import com.example.netclanapp.adapters.rv_PersonListAdapter
 import com.example.netclanapp.databinding.FragmentExploreBinding
 import com.example.netclanapp.ui.Explore.fragments.BusinessFrag
 import com.example.netclanapp.ui.Explore.fragments.MerchantFrag
-import com.example.netclanapp.ui.Explore.fragments.PersonalFragment
+import com.example.netclanapp.ui.Explore.fragments.PersonalFrag
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -47,7 +45,7 @@ class ExploreFragment : Fragment() {
         val tabLayout = binding.tlTabLayout
         val viewpager = binding.vpViewpager
         val tabNamesArray = arrayListOf("Personal", "Business", "Merchant")
-        val fragmentArray = arrayListOf<Fragment>(PersonalFragment(), BusinessFrag(), MerchantFrag())
+        val fragmentArray = arrayListOf<Fragment>(PersonalFrag(), BusinessFrag(), MerchantFrag())
         val adapter = ExploreViewpagerAdapter(fragmentArray, activity as MainActivity)
 
         viewpager.adapter = adapter
