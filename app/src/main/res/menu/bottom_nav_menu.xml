@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_Explore"
+        android:icon="@drawable/ic_baseline_stream_24"
+        android:title="@string/title_Explore"
+        android:titleCondensed="@string/title_Explore"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/navigation_Network"
+        android:icon="@drawable/ic_baseline_hub_24"
+        android:title="@string/title_Network"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/navigation_Chat"
+        android:icon="@drawable/ic_round_chat_24"
+        android:title="@string/title_Chat"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/navigation_Contacts"
+        android:icon="@drawable/phonebook"
+        android:title = "@string/title_Contacts"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/navigation_Group"
+        android:icon="@drawable/ic_baseline_groups_24"
+        android:title =  "@string/title_Group"
+        app:showAsAction="always"
+        />
+</menu>

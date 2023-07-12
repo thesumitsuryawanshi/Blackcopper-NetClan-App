@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_Explore">
+
+
+    <fragment
+        android:id="@+id/navigation_Explore"
+        android:name="com.example.netclanapp.ui.Explore.ExploreFragment"
+        android:label="@string/title_Explore"
+        tools:layout="@layout/fragment_explore" />
+
+    <fragment
+        android:id="@+id/navigation_Network"
+        android:name="com.example.netclanapp.ui.Network.NetworkFragment"
+        android:label="@string/title_Network"
+        tools:layout="@layout/fragment_network" />
+
+    <fragment
+        android:id="@+id/navigation_Chat"
+        android:name="com.example.netclanapp.ui.Chat.ChatFragment"
+        android:label="@string/title_Chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/navigation_Contacts"
+        android:name="com.example.netclanapp.ui.Chat.ContactsFragment"
+        android:label="@string/title_Chat"
+        tools:layout="@layout/fragment_contacts" />
+
+    <fragment
+        android:id="@+id/navigation_Group"
+        android:name="com.example.netclanapp.ui.Group.GroupFragment"
+        android:label="@string/title_Chat"
+        tools:layout="@layout/fragment_group" />
+
+
+</navigation>
