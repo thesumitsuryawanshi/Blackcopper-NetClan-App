@@ -57,6 +57,9 @@ class ExploreFragment : Fragment() {
                 "Grosery -3  "
             )
 
+
+
+
         rvSetUp(personList)
     }
 
