@@ -36,6 +36,7 @@ class ExploreFragment : Fragment() {
 
 
 //Use of ViewModel
+
 //        val exploreViewModel =
 //            ViewModelProvider(this).get(ExploreViewModel::class.java)
 //        val textView: TextView = binding.
