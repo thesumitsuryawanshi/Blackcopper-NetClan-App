@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tabIndicatorAnimationMode="elastic"
         app:tabIndicatorColor="@color/black"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab"
         app:tabIndicatorHeight="4dp"
         app:tabTextColor="@color/black"
         tools:ignore="SpeakableTextPresentCheck" />

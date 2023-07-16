@@ -8,25 +8,27 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="210dp"
         android:layout_margin="15dp"
+
         android:padding="15dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
+        app:flow_horizontalAlign="end"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
             android:orientation="vertical"
-            android:padding="17dp">
+            android:padding="17dp"
+
+            >
 
             <TextView
                 android:id="@+id/tv_PersonName"
@@ -71,15 +73,15 @@
                 android:layout_width="120dp"
                 android:layout_height="6dp"
                 android:layout_gravity="start"
-                android:padding="2dp"
-                android:progress="90"
                 android:layout_marginTop="6dp"
-                android:background="@drawable/searchitem_roundborder" />
+                android:background="@drawable/searchitem_roundborder"
+                android:padding="2dp"
+                android:progress="90" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="5dp"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
 
                 >
 
@@ -87,8 +89,8 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="3dp"
                     android:background="@drawable/bground"
+                    android:padding="3dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -100,8 +102,8 @@
                     android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="3dp"
                     android:background="@drawable/bground"
+                    android:padding="3dp"
                     app:layout_constraintEnd_toStartOf="@+id/imageView2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -147,8 +149,6 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </LinearLayout>
 
         <TextView
@@ -162,8 +162,8 @@
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
         android:layout_width="66dp"
         android:layout_height="72dp"
         android:layout_margin="15dp"
@@ -171,12 +171,10 @@
         app:cardBackgroundColor="@color/purple_200"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.253">
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.007">
 
         <TextView
             android:id="@+id/tv_personName"

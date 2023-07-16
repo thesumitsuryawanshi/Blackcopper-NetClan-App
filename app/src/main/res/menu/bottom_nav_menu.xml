@@ -6,7 +6,6 @@
         android:id="@+id/navigation_Explore"
         android:icon="@drawable/ic_baseline_stream_24"
         android:title="@string/title_Explore"
-        android:titleCondensed="@string/title_Explore"
         app:showAsAction="always"
         />
 
