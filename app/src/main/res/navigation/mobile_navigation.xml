@@ -5,7 +5,6 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_Explore">
 
-
     <fragment
         android:id="@+id/navigation_Explore"
         android:name="com.example.netclanapp.ui.Explore.ExploreFragment"
@@ -35,6 +34,41 @@
         android:name="com.example.netclanapp.ui.Group.GroupFragment"
         android:label="@string/title_Chat"
         tools:layout="@layout/fragment_group" />
+    <fragment
+        android:id="@+id/businessFrag"
+        android:name="com.example.netclanapp.ui.Explore.fragments.BusinessFrag"
+        android:label="fragment_business"
+        tools:layout="@layout/fragment_business" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/merchantFrag"
+        android:name="com.example.netclanapp.ui.Explore.fragments.MerchantFrag"
+        android:label="fragment_merchant"
+        tools:layout="@layout/fragment_merchant" />
+    <fragment
+        android:id="@+id/personalFrag"
+        android:name="com.example.netclanapp.ui.Explore.fragments.PersonalFrag"
+        android:label="fragment_personal"
+        tools:layout="@layout/fragment_personal" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.netclanapp.extras.ui.login.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+
+    <action
+        android:id="@+id/Global_Action_to_filterFragment"
+        app:destination="@id/filterFragment" />
+    <fragment
+        android:id="@+id/refineFrag"
+        android:name="com.example.netclanapp.ui.Explore.fragments.RefineFrag"
+        android:label="fragment_refine"
+        tools:layout="@layout/fragment_refine" />
 
 
+
+    <action
+        android:id="@+id/Global_Action_to_refineFragment"
+        app:destination="@id/refineFrag" />
 </navigation>

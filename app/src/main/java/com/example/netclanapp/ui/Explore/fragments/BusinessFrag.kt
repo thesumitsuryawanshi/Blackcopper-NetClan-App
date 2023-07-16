@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.netclanapp.R
 import com.example.netclanapp.databinding.FragmentBusinessBinding
 
 
@@ -48,5 +50,11 @@ class BusinessFrag : Fragment() {
         binding.rvBusinesssList.adapter = adapter
         adapter.notifyItemInserted(BusinessList.size - 1)
 
+        binding.imageView.setOnClickListener {
+            findNavController().navigate(R.id.Global_Action_to_filterFragment)
+        }
+
     }
+
+
 }

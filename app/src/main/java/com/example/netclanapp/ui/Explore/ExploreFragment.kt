@@ -38,6 +38,8 @@ class ExploreFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewPagerInit()
+
+
     }
 
     private fun viewPagerInit() {
@@ -45,7 +47,7 @@ class ExploreFragment : Fragment() {
         val tabLayout = binding.tlTabLayout
         val viewpager = binding.vpViewpager
         val tabNamesArray = arrayListOf("Personal", "Business", "Merchant")
-        val fragmentArray = arrayListOf<Fragment>(PersonalFrag(), BusinessFrag(), MerchantFrag())
+        val fragmentArray = arrayListOf(PersonalFrag(), BusinessFrag(), MerchantFrag())
         val adapter = ExploreViewpagerAdapter(fragmentArray, activity as MainActivity)
 
         viewpager.adapter = adapter
@@ -68,11 +70,8 @@ class ExploreFragment : Fragment() {
 
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

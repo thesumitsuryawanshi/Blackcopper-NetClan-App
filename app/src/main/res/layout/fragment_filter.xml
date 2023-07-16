@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".extras.ui.login.FilterFragment">
+
+    <!--    <com.google.android.material.appbar.MaterialToolbar-->
+    <!--        android:id="@+id/topToolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?attr/actionBarSize"-->
+    <!--        android:background="?attr/colorPrimary"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/scrollView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:menu="@menu/filter_top_toolbar_menu" />-->
+    <!--    -->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Left icon -->
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_close_24" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Filter by "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <!-- Right text -->
+        <TextView
+            android:id="@+id/clearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="9dp"
+            android:text="CLEAR"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/BtnApply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topToolbar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:padding="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardViewContent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_profession_university_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_margin="20dp"
+                        android:text="Profession | University | Company"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.39"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="5"
+                        android:hint="Enter Company name to filter"
+
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_profession_university_company"
+                        app:layout_constraintHorizontal_bias="0.789"
+                        app:layout_constraintStart_toStartOf="@+id/tv_profession_university_company"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Company Name"
+                        android:textSize="15sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_profession_university_company"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_profession_university_company"
+                        app:layout_constraintHorizontal_bias="0.08"
+                        app:layout_constraintStart_toStartOf="@+id/tv_profession_university_company"
+                        app:layout_constraintTop_toTopOf="@+id/tv_profession_university_company"
+                        app:layout_constraintVertical_bias="0.691" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="5"
+                        android:hint="Enter University name to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toEndOf="@+id/tv_profession_university_company"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tv_profession_university_company"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/Heading1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="30dp"
+                        android:text="Profession"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_profession_university_company"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_profession_university_company"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/tv_profession_university_company"
+                        app:layout_constraintTop_toTopOf="@+id/tv_profession_university_company"
+                        app:layout_constraintVertical_bias="0.143" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="5"
+                        android:hint="Enter Profession to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        android:textStyle=""
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_profession_university_company"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_profession_university_company"
+                        app:layout_constraintHorizontal_bias="0.769"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Heading1"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="University Name"
+                        android:textSize="15sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_profession_university_company"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_profession_university_company"
+                        app:layout_constraintHorizontal_bias="0.081"
+                        app:layout_constraintStart_toStartOf="@+id/tv_profession_university_company"
+                        app:layout_constraintTop_toTopOf="@+id/tv_profession_university_company"
+                        app:layout_constraintVertical_bias="0.426" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:padding="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView1"
+                app:layout_constraintVertical_bias="0.01999998">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardViewContent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_Location"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:layout_margin="20dp"
+                        android:text="Location"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <EditText
+                        android:id="@+id/etcityname"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="30dp"
+
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="5"
+                        android:hint="Enter city to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Location"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Location"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_LivesIn" />
+
+                    <TextView
+                        android:id="@+id/tv_hometown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="30dp"
+                        android:text="Hometown"
+
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Location"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Location"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Location"
+                        app:layout_constraintTop_toTopOf="@+id/tv_Location"
+                        app:layout_constraintVertical_bias="0.07999998" />
+
+                    <EditText
+                        android:id="@+id/et_hometown"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="5"
+
+                        android:hint="Enter city to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_LivesIn"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Location"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Location"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hometown"
+                        app:layout_constraintVertical_bias="0.533" />
+
+                    <TextView
+                        android:id="@+id/tv_LivesIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Lives in"
+                        android:textSize="15sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Location"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Location"
+                        app:layout_constraintHorizontal_bias="0.144"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Location"
+                        app:layout_constraintTop_toTopOf="@+id/tv_Location"
+                        app:layout_constraintVertical_bias="0.587" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView2"
+                app:layout_constraintVertical_bias="0.01999998">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardViewContent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout_editor_absoluteX="31dp"
+                    tools:layout_editor_absoluteY="239dp">
+
+                    <TextView
+                        android:id="@+id/tv_Preferences"
+                        android:layout_width="match_parent"
+                        android:layout_height="700dp"
+                        android:layout_margin="20dp"
+                        android:text="Preference"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.268"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                    <TextView
+                        android:id="@+id/chip2"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+                        android:text="Male"
+                        android:textAlignment="center"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/chip3"
+                        app:layout_constraintEnd_toStartOf="@+id/chip3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Gender" />
+
+                    <TextView
+                        android:id="@+id/chip3"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:layout_marginHorizontal="5dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+
+                        android:text="Female"
+                        android:textAlignment="center"
+
+                        app:layout_constraintEnd_toStartOf="@+id/chip"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/chip2"
+                        app:layout_constraintTop_toTopOf="@+id/chip" />
+
+                    <TextView
+                        android:id="@+id/chip"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:layout_marginEnd="21dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+
+                        android:text="Transgender"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/chip3"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Gender" />
+
+                    <TextView
+                        android:id="@+id/tv_Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="30dp"
+                        android:text="Gender"
+
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Preferences"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toTopOf="@+id/tv_Preferences"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/tv_hobbies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="30dp"
+                        android:text="Hobbies "
+
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Preferences"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toTopOf="@+id/tv_Preferences"
+                        app:layout_constraintVertical_bias="0.152" />
+
+                    <EditText
+                        android:id="@+id/et_Hobbies"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/bg_round"
+
+                        android:ems="10"
+                        android:hint="Enter Hobbies to filter"
+                        android:inputType="textPersonName"
+
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        android:textStyle=""
+                        app:layout_constraintBottom_toTopOf="@+id/tv_Movies"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.526"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hobbies"
+                        app:layout_constraintVertical_bias="0.26999998" />
+
+
+                    <TextView
+                        android:id="@+id/tv_Movies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Movies"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Preferences"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.028"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toTopOf="@+id/tv_Preferences"
+                        app:layout_constraintVertical_bias="0.38" />
+
+                    <EditText
+                        android:id="@+id/etSportname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="10"
+                        android:hint="Enter Sports to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.368"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Sport" />
+
+                    <TextView
+                        android:id="@+id/tv_Sport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sports"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Preferences"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.034"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@+id/et_cuisine"
+                        app:layout_constraintVertical_bias="0.061" />
+
+                    <EditText
+                        android:id="@+id/et_cuisine"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="10"
+                        android:hint="Enter cuisine to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.368"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_food" />
+
+                    <TextView
+                        android:id="@+id/tv_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Preferences"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.036"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@+id/etMoviesname"
+                        app:layout_constraintVertical_bias="0.044" />
+
+                    <EditText
+                        android:id="@+id/etMoviesname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_round"
+                        android:ems="10"
+
+                        android:hint="Enter movies to filter"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:textSize="12sp"
+                        android:textStyle=""
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Preferences"
+                        app:layout_constraintHorizontal_bias="0.368"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Movies" />
+
+                    <TextView
+                        android:id="@+id/tv_LivesIn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Others"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etSportname"
+                        app:layout_constraintVertical_bias="0.058" />
+
+                    <TextView
+                        android:id="@+id/tv_LivesIn5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:text="Smokes"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_LivesIn6"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_LivesIn4" />
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="60dp"
+                        android:layout_height="28dp"
+                        android:layout_marginRight="44dp"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etSportname"
+
+                        app:layout_constraintVertical_bias="0.45"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <TextView
+                        android:id="@+id/tv_LivesIn6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="Drinks"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_LivesIn4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_LivesIn5" />
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="58dp"
+                        android:layout_height="29dp"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        app:layout_constraintHorizontal_bias="0.91"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_Preferences"
+                        app:layout_constraintRight_toRightOf="@id/tv_Preferences"
+                        app:layout_constraintTop_toBottomOf="@id/switch1"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:padding="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview4_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tv_Profile_completion_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="15dp"
+                        android:text="Profile Completion Score"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.39"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                    <TextView
+                        android:id="@+id/seekbarTextValue2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+
+                        android:text="-100"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Profile_completion_score"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="60dp"
+
+                        android:max="100"
+                        android:min="0"
+                        android:padding="5dp"
+                        android:progress="80"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Profile_completion_score"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Profile_completion_score"
+                        app:layout_constraintHorizontal_bias="0.472"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Profile_completion_score"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/seekbarTextValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/seekbarTextValue2"
+                        app:layout_constraintEnd_toStartOf="@+id/seekbarTextValue2"
+                        app:layout_constraintTop_toTopOf="@+id/seekbarTextValue2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+
+                    <TextView
+                        android:id="@+id/chip6"
+
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+
+                        android:layout_marginRight="4dp"
+
+                        android:layout_marginBottom="36dp"
+                        android:text="Business"
+
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/chip9"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/chip5" />
+
+                    <TextView
+                        android:id="@+id/chip9"
+
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+
+                        android:layout_marginBottom="36dp"
+                        android:text="Friendship"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/chip6" />
+
+
+                    <TextView
+                        android:id="@+id/chip5"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="36dp"
+                        android:background="@drawable/bg_chip_light_off"
+                        android:padding="9dp"
+                        android:text="Coffee"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/chip6"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/chip7"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginRight="4dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+                        android:text="Hobbies"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toStartOf="@+id/chip8"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/chip4"
+                        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                    <TextView
+                        android:id="@+id/chip4"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:layout_marginTop="28dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+
+                        android:text="Movies"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toStartOf="@+id/chip7"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                    <TextView
+                        android:id="@+id/chip8"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:padding="9dp"
+                        android:textSize="9sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_chip_light_off"
+                        android:layout_marginTop="28dp"
+                        android:text="Dining"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/chip7"
+                        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="380dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintHorizontal_bias="0.517"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Purpose" />
+
+                    <TextView
+                        android:id="@+id/tv_Purpose"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Purpose"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/divider"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/BtnApply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DC143C"
+        android:text="Apply"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
