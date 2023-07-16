@@ -5,9 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.netclanapp.adapters.rv_PersonListAdapter
+import com.example.netclanapp.MainActivity
 import com.example.netclanapp.databinding.FragmentExploreBinding
+import com.example.netclanapp.ui.Explore.fragments.BusinessFrag
+import com.example.netclanapp.ui.Explore.fragments.MerchantFrag
+import com.example.netclanapp.ui.Explore.fragments.PersonalFrag
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ExploreFragment : Fragment() {
 
@@ -27,55 +31,47 @@ class ExploreFragment : Fragment() {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewPagerInit()
+    }
 
-//Use of ViewModel
+    private fun viewPagerInit() {
 
-//        val exploreViewModel =
-//            ViewModelProvider(this).get(ExploreViewModel::class.java)
-//        val textView: TextView = binding.
-//        exploreViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+        val tabLayout = binding.tlTabLayout
+        val viewpager = binding.vpViewpager
+        val tabNamesArray = arrayListOf("Personal", "Business", "Merchant")
+        val fragmentArray = arrayListOf<Fragment>(PersonalFrag(), BusinessFrag(), MerchantFrag())
+        val adapter = ExploreViewpagerAdapter(fragmentArray, activity as MainActivity)
 
-//temp p-list
-        val personList =
-            listOf(
-                "Electronics",
-                "Fasion",
-                "Furniture",
-                "Gifts",
-                "Grosery",
-                "Mobiles",
-                "Grosery -2 ",
-                "Grosery -3  "
-            )
+        viewpager.adapter = adapter
+        TabLayoutMediator(tabLayout, viewpager) { tab, position ->
+            tab.text = tabNamesArray[position]
+        }.attach()
 
 
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+            }
 
-        rvSetUp(personList)
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+        })
+
     }
 
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-
-    private fun rvSetUp(personList: List<String>) {
-        val adapter = rv_PersonListAdapter(personList)
-
-        binding.rvMusicList.layoutManager = GridLayoutManager(requireContext(), 1)
-        binding.rvMusicList.adapter = adapter
-        adapter.notifyItemInserted(personList.size - 1)
     }
 
 
